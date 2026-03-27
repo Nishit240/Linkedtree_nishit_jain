@@ -6,7 +6,7 @@ A modern, mobile-friendly personal link hub inspired by Linktree — built with 
 
 ---
 
-## 🚀 Live Demo
+## 🚀 Live
 👉 https://nishitjainportfolio.netlify.app/
 
 ---
