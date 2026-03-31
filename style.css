@@ -3,6 +3,158 @@
             padding: 0;
             box-sizing: border-box;
         }
+body {
+    cursor: none;
+}
+/* Custom Cursor Styles */
+.cursor {
+    width: 8px;
+    height: 8px;
+    background: rgba(208, 255, 0, 0.9);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease, height 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.cursor-follower {
+    width: 36px;
+    height: 36px;
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    animation: pulse 3s infinite;
+    transition: width 0.3s ease, height 0.3s ease, border 0.3s ease, transform 0.3s ease;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Hover effects for interactive elements */
+.cursor-active,
+.cursor-follower-active {
+    width: 14px !important;
+    height: 14px !important;
+    background: rgba(255, 255, 255, 0) !important;
+    transform: translate(-50%, -50%) scale(1.2) !important;
+}
+
+.cursor-follower-active {
+    width: 40px !important;
+    height: 40px !important;
+    border: 2px solid rgba(0, 0, 0, 0.6) !important;
+    transform: translate(-50%, -50%) scale(1.1) !important;
+}
+
+/* Trail effect */
+.cursor-trail {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9997;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: opacity 0.2s ease;
+}
+
+/* Cursor text */
+.cursor-text {
+    display: none;
+}
+
+
+/* 💥 MAIN RIPPLE */
+/* .cursor-click {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgba(208, 255, 0, 0.9);
+        box-shadow: 0 0 20px rgba(208, 255, 0, 0.8),
+                0 0 40px rgba(208, 255, 0, 0.4);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9996;
+    animation: clickAnim 0.5s ease-out forwards;
+}
+
+.cursor-click::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid rgba(208, 255, 0, 0.4);
+    animation: clickOuter 0.6s ease-out forwards;
+}
+
+.cursor-click::after {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    border-radius: 50%;
+    background: rgba(208, 255, 0, 0.6);
+    animation: clickFlash 0.3s ease-out forwards;
+}
+
+@keyframes clickAnim {
+    0% {
+        transform: scale(0.3);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+@keyframes clickOuter {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(3.5);
+        opacity: 0;
+    }
+}
+
+@keyframes clickFlash {
+    0% {
+        opacity: 1;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
+*/
+
+/* 🌊 LIQUID GLOW */
+.cursor-follower {
+    border: 2px solid rgba(208, 255, 0, 0.8) !important;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+
+
+/* 🎮 SPEED REACTION */
+.cursor-follower-active {
+    border: 2px solid rgba(208, 255, 0, 0.8) !important;
+    box-shadow: 0 0 25px rgba(208, 255, 0, 0.6);
+}
 
         :root {
             /* --primary: #2d2d2d; */
@@ -98,7 +250,7 @@
 
         /* Links Section */
         .links-section {
-            padding: 30px 20px 30px;
+            padding: 15px 20px 30px;
             display: flex;
             flex-direction: column;
             gap: 15px;
@@ -125,6 +277,19 @@
         box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
         transform: translate(2px, 2px);
         }
+
+        .button-50:hover {
+        background-color: #fff; 
+        color: rgba(208, 255, 0, 0.8);
+        box-shadow: rgba(208, 255, 0, 0.8) 4px 4px 0 0, #000 4px 4px 0 1px;
+    }
+    
+    .button-51:hover {
+        background-color: #fff; 
+        color: rgba(166, 204, 0, 0.8);
+        box-shadow: rgba(208, 255, 0, 0.8) 4px 4px 0 0, #000 4px 4px 0 1px;
+        }
+
 
         .button-51 {
         appearance: button;
