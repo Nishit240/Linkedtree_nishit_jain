@@ -1,32 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nishit</title>
-    <link rel="icon" type="image/png" href="image/favicon_io (1)/android-chrome-192x192.png"> 
+    <link rel="icon" type="image/png" href="image/favicon_io (1)/android-chrome-192x192.png">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="container">
-        <div class="hero-section">
+    <main class="container">
+        <header class="hero-section">
             <img src="image/image1.png" alt="Profile" class="hero-image">
             <div class="hero-overlay">
                 <h1 class="name">Nishit Jain</h1>
                 <p class="title">• Python Developer • Computer Science Engineer • Indore, M.P.</p>
             </div>
-        </div>
-
-        <div class="hero-overlay1">
-            <h1 class="name">Nishit Jain</h1>
-            <p class="title">• Python Developer • Computer Science Engineer • Indore, M.P.</p>
-        </div>
-
+        </header>
 
         <!-- Links Section -->
-        <div class="links-section">
+        <section class="links-section">
             <!-- Portfolio Button - Expands when clicked -->
-            <button class="portfolio-btn button-50" onclick="togglePortfolio()">
+            <button class="portfolio-btn button-50" id="portfolioBtn" aria-expanded="false"
+                aria-controls="portfolioContent">
                 <span>My Portfolio</span>
                 <span id="arrow">▲</span>
             </button>
@@ -35,30 +32,30 @@
                 <div class="portfolio-box">
                     <img src="image/pf.png" alt="Portfolio" class="portfolio-image">
                     <p class="portfolio-text">
-                        Hi, I'm Nishit Jain, a Computer Science & Engineering student. I enjoy building smart, scalable, and visually clean digital solutions.
+                        Hi, I'm Nishit Jain, a Computer Science & Engineering student. I enjoy building smart, scalable,
+                        and visually clean digital solutions.
                     </p>
-                        <a href="https://nishitjainportfolio.netlify.app/" target="_blank">
-                        <button class="button-51" onclick="alert('Opening portfolio...')">Portfolio</button>
-                    </a>
+                    <a href="https://nishitjainportfolio.netlify.app/" target="_blank" class="button-51"
+                        style="display: block; text-decoration: none;">Portfolio</a>
                 </div>
             </div>
 
             <!-- Other Links -->
             <a href="https://www.linkedin.com/in/nishitjain024/" class="portfolio-btn button-50">LinkedIn</a>
             <a href="https://github.com/Nishit240/" class="portfolio-btn button-50">GitHub</a>
-            <button class="portfolio-btn button-50" onclick="openModal()">Have a Coding Challenge?</button>
-        </div>
-    </div>
+            <button class="portfolio-btn button-50" id="openModalBtn">Have a Coding Challenge?</button>
+        </section>
+    </main>
 
     <!-- Contact Modal -->
-    <div class="modal" id="contactModal">
+    <div class="modal" id="contactModal" aria-hidden="true" role="dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h2 class="modal-title">Have a Coding Challenge?</h2>
-                <button class="modal-close" onclick="closeModal()">✕</button>
+                <button class="modal-close" id="closeModalBtn" aria-label="Close modal">✕</button>
             </div>
 
-            <form onsubmit="handleSubmit(event)">
+            <form id="contactForm">
                 <div class="form-group">
                     <input type="text" class="form-input" placeholder="Name" required>
                 </div>
@@ -66,7 +63,8 @@
                     <input type="email" class="form-input" placeholder="Email" required>
                 </div>
                 <div class="form-group">
-                    <textarea class="form-input" placeholder="Message" rows="5" style="resize: none;" required></textarea>
+                    <textarea class="form-input" placeholder="Message" rows="5" style="resize: none;"
+                        required></textarea>
                 </div>
 
                 <button type="submit" class=" button-51">Submit</button>
@@ -77,7 +75,7 @@
             </form>
         </div>
     </div>
-    
+
     <script src="script.js"></script>
 
     <!-- Custom Cursor Elements -->
@@ -86,14 +84,15 @@
     <div class="cursor-text"></div>
 
     <!-- Footer -->
-<div class="footer">
-    <p>
-        Made with ❤️ by 
-        <a href="https://www.linkedin.com/in/nishitjain024/" target="_blank">
-            Nishit Jain
-        </a>
-        <img src="image/signature.png" alt="signature" class="signature">
-    </p>
-</div>
+    <footer class="footer">
+        <p>
+            Made with ❤️ by
+            <a href="https://www.linkedin.com/in/nishitjain024/" target="_blank">
+                Nishit Jain
+            </a>
+            <img src="image/signature.png" alt="signature" class="signature">
+        </p>
+    </footer>
 </body>
+
 </html>
