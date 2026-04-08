@@ -7,7 +7,7 @@ A modern, mobile-friendly personal link hub inspired by Linktree — built with 
 ---
 
 ## 🚀 Live
-👉 https://nishitjainportfolio.netlify.app/
+👉 https://nishitjainlinktree.netlify.app/
 
 ---
 
